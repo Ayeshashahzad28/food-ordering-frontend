@@ -178,3 +178,13 @@ function proceedPay() {
 }
 
 applyFilters();
+
+
+
+
+
+
+
+
+
+

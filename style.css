@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"); */
 /* global reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  font-family: Arial;
 }
 
 body {
@@ -23,7 +23,7 @@ header {
   position: sticky;
   top: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  z-index: 1000;
+  z-index: 1;
 }
 
 /* logo */
@@ -256,6 +256,7 @@ footer {
     flex-direction: column;
     text-align: center;
     padding: 80px 25px;
+    height: 70vh;
   }
 
   .hero h1 {
