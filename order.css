@@ -207,8 +207,9 @@ footer {
   margin-top: 40px;
 }
 
-@media (max-width: 768px) {
-    header {
+@media (max-width: 1024px) {
+
+  header {
     padding: 15px 20px;
   }
 
@@ -221,7 +222,7 @@ footer {
     top: 70px;
     right: 20px;
     background: rgba(20, 20, 24, 0.95);
-    backdrop-filter: blur(18px);
+    backdrop-filter: blur(10px);
     flex-direction: column;
     width: 200px;
     padding: 15px;
@@ -230,28 +231,33 @@ footer {
     display: none;
   }
 
-  nav a {
-    margin: 10px 0;
-  }
-
   nav.active {
     display: flex;
   }
+
+  /* 🔥 MAIN FIX: CHANGE FLEX TO GRID */
   .container {
-    flex-direction: column;
-    padding: 15px ;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "sidebar"
+      "products"
+      "cart";
     gap: 15px;
-  
+    padding: 15px;
   }
+
+  .products {
+    grid-area: products;
+  }
+
   .sidebar {
+    grid-area: sidebar;
     width: 100%;
   }
-  cart {
+
+  .cart {
+    grid-area: cart;
     width: 100%;
-    margin-top: 0%;
   }
-
-
-
-
 }
