@@ -253,10 +253,11 @@ footer {
     display: flex;
   }
   .hero {
+    margin-top: 10%;
     flex-direction: column;
     text-align: center;
     padding: 80px 25px;
-    height: 63vh;
+    height: 62vh;
   }
 
   .hero h1 {
