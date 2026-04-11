@@ -9,14 +9,14 @@ const items = [
     name: "Cheese Pizza",
     price: 1200,
     cat: "pizza",
-    img: "assets/cheese Pizza.jpg",
+    img: "/assets/Cheese Pizza.jpg",
   },
 
   {
     name: "Zinger Burger",
     price: 850,
     cat: "burger",
-    img: "assets/Zinger Burger.jfif",
+    img: "/assets/Zinger Burger.jfif",
   },
   {
     name: "Beef Burger",
