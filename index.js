@@ -16,7 +16,7 @@ const items = [
     name: "Zinger Burger",
     price: 850,
     cat: "burger",
-    img: "/assets/Zinger burger.jfif",
+    img: "/assets/zinger burger.jfif",
   },
   {
     name: "Beef Burger",
