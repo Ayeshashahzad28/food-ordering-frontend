@@ -208,7 +208,6 @@ footer {
 }
 
 @media (max-width: 1024px) {
-
   header {
     padding: 15px 20px;
   }
@@ -227,7 +226,7 @@ footer {
     width: 200px;
     padding: 15px;
     border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     display: none;
   }
 
@@ -235,7 +234,7 @@ footer {
     display: flex;
   }
 
-  /* 🔥 MAIN FIX: CHANGE FLEX TO GRID */
+  /* layout change */
   .container {
     display: grid;
     grid-template-columns: 1fr;
