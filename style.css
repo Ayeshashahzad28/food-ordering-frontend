@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+/* global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #141418, #0d0d0f);
+  color: #fff;
+}
+
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 50px;
+  background: rgba(20, 20, 24, 0.7);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 1000;
+}
+
+/* logo */
+.logo {
+  color: #ff2e63;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* nav links */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: #bbb;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 500;
+  transition: 0.3s;
+  position: relative;
+}
+
+/* hover */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #ff2e63;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ff2e63;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* hamburger (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* hero section*/
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 60px;
+  flex-wrap: wrap;
+  gap: 40px;
+  height: 100vh;
+}
+
+.hero-text {
+  max-width: 550px;
+}
+
+.hero h1 {
+  font-size: 56px;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.hero span {
+  color: #ff2e63;
+}
+
+.hero p {
+  margin: 18px 0;
+  color: #aaa;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.btn {
+  background: linear-gradient(135deg, #ff2e63, #ff5e8a);
+  padding: 14px 28px;
+  border-radius: 30px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 600;
+  transition: 0.3s;
+  box-shadow: 0 10px 30px rgba(255, 46, 99, 0.3);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+/* sections */
+section {
+  padding: 70px 60px;
+}
+
+/* deals */
+.deals h2,
+.categories h2,
+.restaurants h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.deal-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.deal {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 22px;
+  border-radius: 16px;
+  transition: 0.3s;
+}
+
+.deal:hover {
+  transform: translateY(-6px);
+  border-color: #ff2e63;
+}
+
+.deal h3 {
+  color: #ff2e63;
+}
+
+/* catagories */
+.cat-box {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cat {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px 20px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.cat:hover {
+  background: #ff2e63;
+  transform: scale(1.05);
+}
+
+/* restaurants*/
+.rest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.rest-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 15px;
+  border-radius: 16px;
+  transition: 0.3s;
+}
+
+.rest-card:hover {
+  transform: translateY(-6px);
+  border-color: #ff2e63;
+}
+
+.rest-card img {
+  width: 225px;
+  height: 225px;
+  border-radius: 12px;
+}
+
+.rest-card h4 {
+  margin: 10px 0;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #111;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: rgba(20, 20, 24, 0.95);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    width: 200px;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: none;
+  }
+
+  nav a {
+    margin: 10px 0;
+  }
+
+  nav.active {
+    display: flex;
+  }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 25px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  header {
+    padding: 15px 20px;
+  }
+}

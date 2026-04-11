@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TimeMeal - Contact</title>
+    <link rel="stylesheet" href="contact.css" />
+    <script src="navbar.js"></script>
+  </head>
+  <body>
+    <!-- header & navbar -->
+    <header>
+      <div class="logo">TimeMeal</div>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="order.html">Order</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <!-- contact form -->
+    <div class="container">
+      <div class="grid">
+        <!-- FORM -->
+        <form>
+          <h2>Contact / Complaint</h2>
+          <p style="color: #aaa">
+            Facing an issue? Submit your complaint and our support team will
+            respond quickly.
+          </p>
+
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+
+          <select required>
+            <option value="">Select Issue Type</option>
+            <option>Order Issue</option>
+            <option>Late Delivery</option>
+            <option>Payment Problem</option>
+            <option>General Inquiry</option>
+          </select>
+
+          <textarea placeholder="Describe your issue..." rows="5"></textarea>
+
+          <button type="submit">Submit Request</button>
+        </form>
+
+        <!-- information & contact details -->
+        <div class="info">
+          <div class="card">
+            <h3>📞 Contact Number</h3>
+            <p>+92 300 1234567</p>
+          </div>
+
+          <div class="card">
+            <h3>📍 Location</h3>
+            <p>Lahore, Pakistan</p>
+          </div>
+
+          <div class="card">
+            <h3>🏢 Headquarters</h3>
+            <p>TimeMeal, xyz, Lahore</p>
+          </div>
+
+          <div class="card">
+            <h3>⏰ Support Hours</h3>
+            <p>24/7 Customer Support Available</p>
+          </div>
+
+          <div class="card">
+            <h3>📧 Email</h3>
+            <p>support@TimeMeal.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <p>&copy; 2026 TimeMeal. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

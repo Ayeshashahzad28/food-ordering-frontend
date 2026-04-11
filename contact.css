@@ -1,0 +1,177 @@
+/* global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+body {
+  background: #0d0d0f;
+  color: #fff;
+}
+
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 50px;
+  background: rgba(20, 20, 24, 0.7);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 1000;
+}
+
+/* logo */
+.logo {
+  color: #ff2e63;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* nav links */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: #bbb;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 500;
+  transition: 0.3s;
+  position: relative;
+}
+
+/* hover */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #ff2e63;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ff2e63;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* hamburger  (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 30px;
+}
+
+form {
+  background: #1c1c1f;
+  padding: 25px;
+  border-radius: 15px;
+}
+input,
+textarea,
+select {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+}
+button {
+  background: #ff2e63;
+  padding: 12px;
+  border: none;
+  color: #fff;
+  width: 100%;
+  border-radius: 20px;
+  cursor: pointer;
+}
+h2 {
+  color: #ff2e63;
+  margin-bottom: 10px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.card {
+  background: #1c1c1f;
+  padding: 20px;
+  border-radius: 15px;
+}
+.card h3 {
+  color: #ff2e63;
+  margin-bottom: 5px;
+}
+.card p {
+  color: #aaa;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: rgba(20, 20, 24, 0.95);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    width: 200px;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: none;
+  }
+
+  nav a {
+    margin: 10px 0;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

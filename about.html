@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TimeMeal - About</title>
+    <link rel="stylesheet" href="about.css" />
+    <script src="navbar.js"></script>
+  </head>
+  <body>
+    <!-- header & navbar -->
+    <header>
+      <div class="logo">TimeMeal</div>
+
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+      <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="order.html">Order</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <!-- info -->
+    <section>
+      <div class="container">
+        <h1>About Us</h1>
+        <p>
+          TimeMeal is a modern food delivery platform providing fast, fresh, and
+          delicious meals at your doorstep. We focus on speed, quality, and
+          customer satisfaction.
+        </p>
+
+        <!-- features -->
+        <div class="cards">
+          <div class="card">
+            <h2>🚀 Fast Delivery</h2>
+            <p>
+              We ensure your food reaches you within minutes with our optimized
+              delivery network.
+            </p>
+          </div>
+          <div class="card">
+            <h2>🍔 Quality Food</h2>
+            <p>
+              We partner only with top-rated restaurants to maintain high
+              quality standards.
+            </p>
+          </div>
+          <div class="card">
+            <h2>📍 Live Tracking</h2>
+            <p>
+              Track your order in real-time from restaurant to your doorstep.
+            </p>
+          </div>
+        </div>
+
+        <!-- delivery standards -->
+        <div style="margin-top: 40px">
+          <h2>Our Delivery Standards</h2>
+          <p>✔ Orders delivered within 30 minutes</p>
+          <p>✔ Hygienic packaging and safety checks</p>
+          <p>✔ Verified delivery riders</p>
+          <p>✔ 24/7 customer support</p>
+        </div>
+
+        <!-- faq -->
+        <div class="faq">
+          <h2>FAQs</h2>
+
+          <div class="faq-item" onclick="toggleFAQ(this)">
+            <strong>How long does delivery take?</strong>
+            <p>Usually between 20–30 minutes depending on your location.</p>
+          </div>
+
+          <div class="faq-item" onclick="toggleFAQ(this)">
+            <strong>Can I cancel my order?</strong>
+            <p>
+              Yes, you can cancel within a few minutes after placing your order.
+            </p>
+          </div>
+
+          <div class="faq-item" onclick="toggleFAQ(this)">
+            <strong>Do you offer refunds?</strong>
+            <p>Yes, refunds are processed in case of issues with your order.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <p>&copy; 2026 TimeMeal. All rights reserved.</p>
+    </footer>
+
+    <script src="about.js"></script>
+  </body>
+</html>
