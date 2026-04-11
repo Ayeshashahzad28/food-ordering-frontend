@@ -230,6 +230,10 @@ footer {
     display: none;
   }
 
+  nav a {
+    margin: 10px 0;
+  }
+
   nav.active {
     display: flex;
   }
