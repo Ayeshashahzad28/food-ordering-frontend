@@ -3,97 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TimeMeal - Home</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="navbar.js"></script>
+    <meta name="theme-color" content="#0d0d0f" />
+    <meta
+      name="description"
+      content="TimeMeal: order food from top restaurants, pay your way and track your delivery live."
+    />
+    <title>TimeMeal · Food delivery</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23ff2e63'/%3E%3Cpath d='M16 7v9l6 4' stroke='white' stroke-width='2.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"
+    />
+
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/views.css" />
   </head>
   <body>
-    <!-- header & navbar -->
-    <header>
-      <div class="logo">TimeMeal</div>
+    <a class="skip-link" href="#view">Skip to content</a>
 
-      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <header class="header" id="site-header"></header>
+    <main id="view" tabindex="-1"></main>
+    <footer class="footer" id="site-footer"></footer>
+    <nav class="tab-bar" id="tab-bar" aria-label="Primary"></nav>
+    <div class="toasts" id="toasts" role="status" aria-live="polite"></div>
 
-      <nav id="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="order.html">Order</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </header>
+    <noscript
+      ><p style="padding: 2rem; text-align: center">
+        TimeMeal needs JavaScript to run.
+      </p></noscript
+    >
 
-    <!-- hero section -->
-    <section class="hero">
-      <div class="hero-text">
-        <h1>Crave it. <span>Get it</span> delivered fast.</h1>
-        <p>
-          Order your favorite meals from top restaurants near you with just one
-          click.
-        </p>
-        <a href="order.html" class="btn">Start Ordering</a>
-      </div>
-    </section>
-
-    <!-- deals -->
-    <section class="deals">
-      <h2>🔥 Hot Deals</h2>
-      <div class="deal-cards">
-        <div class="deal">
-          <h3>50% OFF</h3>
-          <p>On selected Pizza items</p>
-        </div>
-        <div class="deal">
-          <h3>Free Delivery</h3>
-          <p>Orders above Rs 1000</p>
-        </div>
-        <div class="deal">
-          <h3>Buy 1 Get 1</h3>
-          <p>On Burgers & Wraps</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- catagories -->
-    <section class="categories">
-      <h2>🍔 Categories</h2>
-
-      <div class="cat-box">
-        <a class="cat" href="order.html">🍕 Pizza</a>
-        <a class="cat" href="order.html">🍔 Burger</a>
-        <a class="cat" href="order.html">🍛 Desi</a>
-        <a class="cat" href="order.html">🍜 Chinese</a>
-        <a class="cat" href="order.html">🥤 Drinks</a>
-        <a class="cat" href="order.html">🍟 Fast Food</a>
-      </div>
-    </section>
-
-    <!-- restaurants -->
-    <section class="restaurants">
-      <h2>🍽 Popular Restaurants</h2>
-      <div class="rest-grid">
-        <div class="rest-card">
-          <img src="./assets/pizza hut.png" />
-          <h4>Pizza Hut</h4>
-          <p>Fast Delivery • Min Rs 500</p>
-        </div>
-
-        <div class="rest-card">
-          <img src="./assets/burger lab.png" />
-          <h4>Burger Lab</h4>
-          <p>Top Rated • Min Rs 300</p>
-        </div>
-
-        <div class="rest-card">
-          <img src="./assets/desi tadka.jfif" />
-          <h4>Desi Tadka</h4>
-          <p>Traditional • Min Rs 400</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- footer -->
-    <footer>
-      <p>&copy; 2026 TimeMeal. All rights reserved.</p>
-    </footer>
+    <!-- core -->
+    <script src="js/core/utils.js"></script>
+    <script src="js/core/store.js"></script>
+    <script src="js/core/router.js"></script>
+    <script src="js/core/actions.js"></script>
+    <!-- data + services -->
+    <script src="js/data/catalog.js"></script>
+    <script src="js/services/availability.js"></script>
+    <script src="js/services/cart.js"></script>
+    <script src="js/services/orders.js"></script>
+    <!-- ui -->
+    <script src="js/ui/toast.js"></script>
+    <script src="js/ui/modal.js"></script>
+    <script src="js/ui/forms.js"></script>
+    <script src="js/ui/components.js"></script>
+    <script src="js/ui/dialogs.js"></script>
+    <script src="js/ui/header.js"></script>
+    <!-- views -->
+    <script src="js/views/home.js"></script>
+    <script src="js/views/restaurant.js"></script>
+    <script src="js/views/checkout.js"></script>
+    <script src="js/views/tracking.js"></script>
+    <script src="js/views/orders.js"></script>
+    <script src="js/views/account.js"></script>
+    <script src="js/views/help.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
